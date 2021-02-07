@@ -1,7 +1,7 @@
 # Site setings
-name: 'Royce'
-description: 'Web Developer'
-meta_description: 'Jekyll template, minimal style, perfect for bloggers.'
+name: 'Ashley Van Spankeren'
+description: 'Software Developer'
+meta_description: ''
 logo:
 # Author image is used in site sidebar and greetings in the home page hero text
 author:
@@ -9,7 +9,7 @@ author:
   greetings: "Hi there! My name is Charles Lavoie. I'm a freelance web developer, author and speaker based in Montreal, Canada. It’s nice to meet you."
 favicon: 'assets/images/favicon.ico'
 baseurl: 
-production_url: https://royce.netlify.com/
+production_url: https://ashvan.ca/
 disqus: 'justgoodthemes'
 mailchimp_url: '//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117'
 # Add your GA Tracking Id
@@ -39,6 +39,8 @@ navigation:
     url: /
   - text: About
     url: /about
+  - text: Resume
+    url: /resume
   - text: Style Guide
     url: /style-guide
   - text: Contact Me
