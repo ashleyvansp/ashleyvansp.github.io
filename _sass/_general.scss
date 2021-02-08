@@ -194,7 +194,7 @@ hr {
 table {
   font-size: 0.88889rem;
   line-height: 1.5;
-  margin: 0 0 1.875em;
+  margin: 1.5em 0 0;
   text-align: left;
   width: 100%;
 }
@@ -207,15 +207,14 @@ caption {
   text-align: left;
 }
 
-th,
 td {
-  border-bottom: 1px solid $gray-lighter;
-  padding: 0.5em 5px;
+  padding: 0 0 0.75em 0;
 }
 
 th {
   color: $gray-darkest;
   font-weight: bold;
+  padding: 0em;
 }
 
 /* Form fields */

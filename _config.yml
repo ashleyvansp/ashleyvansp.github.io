@@ -39,8 +39,8 @@ navigation:
     url: /
   - text: About
     url: /about
-  - text: Resume
-    url: /resume
+  - text: Curriculum Vitae
+    url: /curriculum-vitae
   - text: Style Guide
     url: /style-guide
   - text: Contact Me
