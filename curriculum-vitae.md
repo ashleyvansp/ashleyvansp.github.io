@@ -58,13 +58,72 @@ title: Curriculum Vitae
     </tbody>
 </table>
 
-## Work Experience
+## Technical Skills
 
 
 <table>
 <thead>
     <tr>
-        <th>Python Development and Machine Learning Co-op</th>
+        <th>Programming Languages</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr>
+            <td>
+                <ul>
+                    <li>Object-oriented: C, C++</li>
+                    <li>Scripting: Python, Javascript</li>
+                    <li>Database management: SQL, HQL</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+<thead>
+    <tr>
+        <th>Frameworks</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr>
+            <td>
+                <ul>
+                    <li>Frontend: Vue, React</li>
+                    <li>Backend: Django, ASP.NET MVC, ASP.NET Core</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+<thead>
+    <tr>
+        <th>Environments and Project Management</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr>
+            <td>
+                <ul>
+                    <li>Version control: Git, Atlassian Bitbucket, Microsoft Azure DevOps</li>
+                    <li>Atlassian JIRA</li>
+                    <li>Virtualization (particularly using VirtualBox)</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+## Professional Experience
+
+
+<table>
+<thead>
+    <tr>
+        <th>Software Development and Machine Learning Co-op</th>
         <th align="right">September 2020 - Present</th>
     </tr>
 </thead>
@@ -78,12 +137,11 @@ title: Curriculum Vitae
         <tr>
             <td colspan="2">
                 <ul>
-                    <li>Developed a .NET Core web application to compile personal financial data into a concise analysis report which facilitated investment advisory</li>
-                    <li>Identified significant performance enhancement opportunities in a web application using Apache JMeter</li>
-                    <li>Protected against regression defects by updating unit test suites using tools such as Jest and MSTest</li>
-                    <li>Maintained high standard of product quality by performing code reviews, testing changes to new features, and documenting bugs</li>
-                    <li>Contributed to agile development through daily stand-up meetings, frequent releases, and bi-weekly sprint planning</li>
-                    <li>Recorded detailed and accurate minutes in client meetings to facilitate planning the upcoming sprint</li>
+                    <li>Full stack development of a tissue slide image annotation application to provide diagnostic support for histologists</li>
+                    <li>Implemented a heatmap feature to display regions of interest of tissue slide images as identified by deep learning models</li>
+                    <li>Responsible for the installation and configuration of a self-hosted WordPress site using a Linux, Nginx, MySQL, and PHP (LEMP) stack</li>
+                    <li>Automated a weekly backup of annotation files to on- and off-premise servers using cron and Bash</li>
+                    <li>Analyzed latest deep learning and cancer research as a member of the lab’s weekly journal club </li>
                 </ul>
             </td>
         </tr>
@@ -107,8 +165,7 @@ title: Curriculum Vitae
                     <li>Developed a .NET Core web application to compile personal financial data into a concise analysis report which facilitated investment advisory</li>
                     <li>Identified significant performance enhancement opportunities in the search functionality of a compliance management platform using Apache JMeter</li>
                     <li>Protected against regression defects by updating unit test suites using tools such as Jest and MSTest</li>
-                    <li>Recorded detailed and accurate minutes in client meetings to facilitate planning the upcoming sprint</li>
-                    <li>Organized and hosted a free educational workshop designed to introduce youth to coding and technology</li>
+                    <li>Raised $1000 for the Calgary Food Bank and hosted a free coding workshop for youth through intern-led corporate social responsibility initiatives</li>
                     <li>Contributed to agile development through daily stand-up meetings, frequent releases, and bi-weekly sprint planning</li>
                 </ul>
             </td>
@@ -130,7 +187,7 @@ title: Curriculum Vitae
         <tr>
             <td colspan="2">
                 <ul>
-                    <li>Designed and developed an Excel dashboard using VBA and PowerPivot to streamline access to inventory data</li>
+                    <li>Designed and developed an inventory dashboard using VBA and PowerPivot to streamline access to production data </li>
                     <li>Prevented potential security breaches by overseeing the maintenance and security updates of over 80 office computers</li>
                     <li>Responded to remote and in-person service desk requests with professionalism</li>
                     <li>Liaised with software vendors to monitor bug fixes and new releases</li>
@@ -228,6 +285,23 @@ title: Curriculum Vitae
         </tr>
         <tr>
             <td colspan="2">Assist medical staff by providing guidance and care to patients, particularly in the waiting room and triage area.</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+<thead>
+    <tr>
+        <th>Peer Mentor</th>
+        <th align="right">September 2020 - Present</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr>
+            <td colspan="2">UVic Women in Science, Victoria, BC</td>
+        </tr>
+        <tr>
+            <td colspan="2">Demonstrate leadership and support to first-year students by organizing monthly check-ins and sharing strategies for academic success.</td>
         </tr>
     </tbody>
 </table>
