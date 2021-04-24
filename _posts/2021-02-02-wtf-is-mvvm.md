@@ -3,7 +3,8 @@ layout: post
 title: 'WTF is MVVM'
 subtitle: 'An intern’s survival guide to decrypting tech jargon.'
 tags: [Co-op, Internship, Tips]
-featured: false
+featured_image: assets/images/posts/2021/mvvm.png
+featured: true
 hidden: false
 ---
 
