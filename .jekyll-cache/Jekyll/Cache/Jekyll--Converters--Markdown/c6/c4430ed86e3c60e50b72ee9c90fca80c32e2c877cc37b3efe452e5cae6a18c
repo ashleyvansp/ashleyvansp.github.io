@@ -1,5 +1,4 @@
-I"�
-<!--more-->
+I"o<!--more-->
 <p>POV: It’s the first day of your internship at a tech company. You’re a little nervous, but you know how to reverse a linked list, so you figure you’ve got this. You don’t know exactly what a casual dress code allows, so you opt for something that your grandma would approve of for Sunday dinner; respectable but not trying too hard. Flash forward to your first team meeting: walking through the project code base. Amidst a plethora of abbreviations getting thrown around, the tech lead mentions “… and we use <em>sequel server</em> for our DBMS”. Wait - that’s how SQL is pronounced? Now you’re panicking, remembering that not only did you call it “ess cue ell” in the interview but you don’t remember the difference between an inner join and outer join.</p>
 
 <p>Parsing the jargon used in the world of software development often feels like learning a whole new language (and this is on top of actually learning new programming languages). Here are some terms I wish I knew before starting my first internship:</p>
@@ -13,27 +12,25 @@
 <h5 id="vcs-version-control-system">VCS (Version Control System)</h5>
 <p>This is a way for teams to keep track of changes to a codebase. If you’re not yet familiar, checkout <a href="https://git-scm.com">Git</a> (pun intended).</p>
 
-<h3 id="front-end">Front end</h3>
-<p>The part of a website that users interact with. Front end code</p>
-<ul>
-  <li>Stack</li>
-  <li>Framework</li>
-  <li>Architecture (see also: MVVM, MVC)</li>
-  <li>Front end</li>
-  <li>Backend</li>
-  <li>Wrapper</li>
-  <li>Server</li>
-  <li>Version control (VCS)</li>
-  <li>Local/ locally</li>
-  <li>Environment</li>
-  <li>PR</li>
-  <li>API</li>
-  <li>IDE</li>
-  <li>UX/UI</li>
-  <li>SSH</li>
-  <li>TDD</li>
-  <li>SaaS</li>
-</ul>
+<h4 id="front-end">Front end</h4>
+<p>(AKA client side)<br />
+The part of an application that users interact with. Front end code usually looks like HTML, CSS, and Javascript.</p>
+
+<h4 id="back-end">Back end</h4>
+<p>(AKA server side)<br />
+The part of an application that communicates between the database and the browser. Also the part that users don’t see. Back end code may include Java, Python, or C#.</p>
+
+<h4 id="architecture">Architecture</h4>
+<p>A frustratingly broad term that refers to the structure or design of the codebase. The architecture defines the different elements or layers of the application, as well as properties or relations that exist between them. MVC (model-view-controller) and MVVM (model-view-viewmodel) are two common architectures.</p>
+
+<h4 id="saas-software-as-a-service">SaaS (Software as a Service)</h4>
+<p>Different from <a href="https://sass-lang.com/">Sass</a>, although pronounced the same. SaaS is used interchangeably with “cloud-based solution” and is spoken of fondly because it allows users to access their application from a web browser, rather than downloading and installing it on their computer.</p>
+
+<h4 id="ide-integrated-development-environment">IDE (Integrated Development Environment)</h4>
+<p>An application containing tools to assist with software development. Such tools may include a text editor, debugger, and console.</p>
+
+<h4 id="local">Local</h4>
+<p>To run a program locally means to run it on your current device, rather than on a remote server (or “in production/ beta/ some other environment”). The beauty of running locally is that your changes affect only your local device, i.e. you’re not going to crash that super important client project. When running locally, you can usually access the application and see your changes by going to <code class="language-plaintext highlighter-rouge">127.0.0.1</code> or <code class="language-plaintext highlighter-rouge">localhost</code> in a web browser.</p>
 
 <p>This just scratches the surface of the ever-expanding terminology used in the software world. The reality is, regardless of how prepared you try to be, the first day (and week and probably month) is going to be like drinking from a fire hose. Stay curious, enjoy the learning process, and ask for clarification. You might not know (yet!) the difference between MySQL and PostgreSQL but hey, at least now you know how to pronounce it.</p>
 

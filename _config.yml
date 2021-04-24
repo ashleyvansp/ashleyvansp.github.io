@@ -6,7 +6,7 @@ name: 'Ashley Van Spankeren'
 # logo: 'authorimage.jpg'
 # Author image is used in site sidebar and greetings in the home page hero text
 author:
-  image: 'authorimage.jpg'
+  image: 'authorimage_back.jpg'
   greetings: "Curious explorer, innate problem solver."
 favicon: 'assets/images/favicon.ico'
 baseurl: 

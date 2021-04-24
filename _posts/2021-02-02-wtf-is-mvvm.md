@@ -23,30 +23,25 @@ Often pronounced "gooey". This is a way to interact with a program through click
 ##### VCS (Version Control System)
 This is a way for teams to keep track of changes to a codebase. If you're not yet familiar, checkout [Git](https://git-scm.com) (pun intended).
 
-### Front end
-(A.K.A client side)
-The part of a website that users interact with. Front end code usually looks like HTML, CSS, and Javascript.
+#### Front end
+(AKA client side)\
+The part of an application that users interact with. Front end code usually looks like HTML, CSS, and Javascript.
 
-### Back end
-(A.K.A server side)
+#### Back end
+(AKA server side)\
+The part of an application that communicates between the database and the browser. Also the part that users don't see. Back end code may include Java, Python, or C#.
 
-* Stack
-* Framework 
-* Architecture (see also: MVVM, MVC)
-* Front end
-* Backend
-* Wrapper 
-* Server
-* Version control (VCS)
-* Local/ locally
-* Environment
-* PR
-* API
-* IDE
-* UX/UI
-* SSH
-* TDD
-* SaaS
+#### Architecture
+A frustratingly broad term that refers to the structure or design of the codebase. The architecture defines the different elements or layers of the application, as well as properties or relations that exist between them. MVC (model-view-controller) and MVVM (model-view-viewmodel) are two common architectures.
+
+#### SaaS (Software as a Service)
+Different from [Sass](https://sass-lang.com/), although pronounced the same. SaaS is used interchangeably with "cloud-based solution" and is spoken of fondly because it allows users to access their application from a web browser, rather than downloading and installing it on their computer.
+
+#### IDE (Integrated Development Environment)
+An application containing tools to assist with software development. Such tools may include a text editor, debugger, and console.
+
+#### Local
+To run a program locally means to run it on your current device, rather than on a remote server (or "in production/ beta/ some other environment"). The beauty of running locally is that your changes affect only your local device, i.e. you're not going to crash that super important client project. When running locally, you can usually access the application and see your changes by going to `127.0.0.1` or `localhost` in a web browser.
 
 This just scratches the surface of the ever-expanding terminology used in the software world. The reality is, regardless of how prepared you try to be, the first day (and week and probably month) is going to be like drinking from a fire hose. Stay curious, enjoy the learning process, and ask for clarification. You might not know (yet!) the difference between MySQL and PostgreSQL but hey, at least now you know how to pronounce it. 
 

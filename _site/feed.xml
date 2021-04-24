@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Apr 2021 20:09:20 -0600</pubDate>
-    <lastBuildDate>Fri, 23 Apr 2021 20:09:20 -0600</lastBuildDate>
+    <pubDate>Fri, 23 Apr 2021 21:25:47 -0600</pubDate>
+    <lastBuildDate>Fri, 23 Apr 2021 21:25:47 -0600</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -25,32 +25,25 @@
 &lt;h5 id=&quot;vcs-version-control-system&quot;&gt;VCS (Version Control System)&lt;/h5&gt;
 &lt;p&gt;This is a way for teams to keep track of changes to a codebase. If you’re not yet familiar, checkout &lt;a href=&quot;https://git-scm.com&quot;&gt;Git&lt;/a&gt; (pun intended).&lt;/p&gt;
 
-&lt;h3 id=&quot;front-end&quot;&gt;Front end&lt;/h3&gt;
-&lt;p&gt;(A.K.A client side)
-The part of a website that users interact with. Front end code usually looks like HTML, CSS, and Javascript.&lt;/p&gt;
+&lt;h4 id=&quot;front-end&quot;&gt;Front end&lt;/h4&gt;
+&lt;p&gt;(AKA client side)&lt;br /&gt;
+The part of an application that users interact with. Front end code usually looks like HTML, CSS, and Javascript.&lt;/p&gt;
 
-&lt;h3 id=&quot;back-end&quot;&gt;Back end&lt;/h3&gt;
-&lt;p&gt;(A.K.A server side)&lt;/p&gt;
+&lt;h4 id=&quot;back-end&quot;&gt;Back end&lt;/h4&gt;
+&lt;p&gt;(AKA server side)&lt;br /&gt;
+The part of an application that communicates between the database and the browser. Also the part that users don’t see. Back end code may include Java, Python, or C#.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Stack&lt;/li&gt;
-  &lt;li&gt;Framework&lt;/li&gt;
-  &lt;li&gt;Architecture (see also: MVVM, MVC)&lt;/li&gt;
-  &lt;li&gt;Front end&lt;/li&gt;
-  &lt;li&gt;Backend&lt;/li&gt;
-  &lt;li&gt;Wrapper&lt;/li&gt;
-  &lt;li&gt;Server&lt;/li&gt;
-  &lt;li&gt;Version control (VCS)&lt;/li&gt;
-  &lt;li&gt;Local/ locally&lt;/li&gt;
-  &lt;li&gt;Environment&lt;/li&gt;
-  &lt;li&gt;PR&lt;/li&gt;
-  &lt;li&gt;API&lt;/li&gt;
-  &lt;li&gt;IDE&lt;/li&gt;
-  &lt;li&gt;UX/UI&lt;/li&gt;
-  &lt;li&gt;SSH&lt;/li&gt;
-  &lt;li&gt;TDD&lt;/li&gt;
-  &lt;li&gt;SaaS&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h4 id=&quot;architecture&quot;&gt;Architecture&lt;/h4&gt;
+&lt;p&gt;A frustratingly broad term that refers to the structure or design of the codebase. The architecture defines the different elements or layers of the application, as well as properties or relations that exist between them. MVC (model-view-controller) and MVVM (model-view-viewmodel) are two common architectures.&lt;/p&gt;
+
+&lt;h4 id=&quot;saas-software-as-a-service&quot;&gt;SaaS (Software as a Service)&lt;/h4&gt;
+&lt;p&gt;Different from &lt;a href=&quot;https://sass-lang.com/&quot;&gt;Sass&lt;/a&gt;, although pronounced the same. SaaS is used interchangeably with “cloud-based solution” and is spoken of fondly because it allows users to access their application from a web browser, rather than downloading and installing it on their computer.&lt;/p&gt;
+
+&lt;h4 id=&quot;ide-integrated-development-environment&quot;&gt;IDE (Integrated Development Environment)&lt;/h4&gt;
+&lt;p&gt;An application containing tools to assist with software development. Such tools may include a text editor, debugger, and console.&lt;/p&gt;
+
+&lt;h4 id=&quot;local&quot;&gt;Local&lt;/h4&gt;
+&lt;p&gt;To run a program locally means to run it on your current device, rather than on a remote server (or “in production/ beta/ some other environment”). The beauty of running locally is that your changes affect only your local device, i.e. you’re not going to crash that super important client project. When running locally, you can usually access the application and see your changes by going to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;127.0.0.1&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost&lt;/code&gt; in a web browser.&lt;/p&gt;
 
 &lt;p&gt;This just scratches the surface of the ever-expanding terminology used in the software world. The reality is, regardless of how prepared you try to be, the first day (and week and probably month) is going to be like drinking from a fire hose. Stay curious, enjoy the learning process, and ask for clarification. You might not know (yet!) the difference between MySQL and PostgreSQL but hey, at least now you know how to pronounce it.&lt;/p&gt;
 
