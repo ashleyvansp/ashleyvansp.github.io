@@ -1,0 +1,43 @@
+I"�<p>•	We all are interested in writing “good” code
+•	This might include writing unit tests, including descriptive comments, and organizing code into logical sections to make it more readable
+•	In general we strive for a cohesive, robust codebase
+•	It turns out that a lot of these things can be automated by git hooks</p>
+
+<h3 id="what-are-hooks">What are hooks?</h3>
+<p>Hooks are scripts that Git executes automatically when triggered by events such as a commit or a push
+•	The sample scripts provided by Git are bash shell scripts, but they can be written in any scripting language as long as it can be run as an executable</p>
+
+<p>•	Hooks can be powerful tools with a wide range of functionality
+•	Can cover “grammar police” tasks such as following naming conventions and checking for trailing whitespace
+•	Critical tasks such as unreachable code and using uninitialized variables
+•	Run unit testing suites
+•	Sending an email notification if the repository is updated</p>
+
+<p>•	Thinking about a continuous integration workflow, we see that different tasks for a hook make sense at different places
+•	For instance, if you want a hook that ensures that commit messages are capitalized, you would want it to execute immediately after the user enters the commit message
+•	Git has identified the 12 possible places in the workflow where a hook can execute, and these are specified by the name of the file in the hooks directory</p>
+
+<p>•	Hooks are local to a Git repository, and they are not copied over to the new repository when you run git clone
+•	They also aren’t under version control
+•	So it can be challenging to keep them synchronized across team members
+•	However, there are ways to regulate this
+•	Hook scripts can be stored in the actual project directory and installed with either a symlink or a simple copy-paste
+•	Client-side hooks can best be used for two purposes
+o	Commit-related tasks such as code or commit message formatting
+o	Notification tasks such as emailing collaborators when changes are made
+•	But there’s also functionality with checking out or merging</p>
+
+<p>•	Since client-side hooks can be modified (or even removed) by the developer in their local repository, they can’t be used to enforce coding standards, only to facilitate good coding practices
+•	However, server-side hooks can be a safeguard against the rebellious developer by rejecting any commits that do not meet specified standards
+•	This is the primary purpose of server-side hooks, and they’re most useful on large projects
+•	Good for regulating who is allowed to push to the repo, the format of the commit message, or the changes contained in the commit</p>
+
+<p>•	Here’s a very basic example
+•	I have a git repository for a hello world program
+•	Say that I want to change it to say good morning instead
+•	Then I have a simple pre-commit hook in that .git/hooks folder. Suppose your company suspects that the rival company is sneaking into your office in the night and forging bad commits on employees’ computers. To defend against this, the obvious thing to do is add a secret password before allowing commits.
+•	I chose to use my favourite scripting language and changed the shebang to reflect that I’d be using Python instead of Bash
+•	I’d like to take input from the developer, but hooks are typically noninteractive. So on line 6, I redirect standard input to the terminal.
+•	Then I ask for the secret password and exit with success or failure depending on whether the password is correct</p>
+
+:ET

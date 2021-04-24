@@ -3,13 +3,10 @@ layout: post
 title: 'WTF is MVVM'
 subtitle: 'An intern’s survival guide to decrypting tech jargon.'
 tags: [Co-op, Internship, Tips]
-featured_image_thumbnail: assets/images/posts/2018/4_thumbnail.jpg
-featured_image: assets/images/posts/2018/4.jpg
-featured: true
+featured: false
 hidden: false
 ---
 
-<!--more-->
 POV: It’s the first day of your internship at a tech company. You’re a little nervous, but you know how to reverse a linked list, so you figure you’ve got this. You don’t know exactly what a casual dress code allows, so you opt for something that your grandma would approve of for Sunday dinner; respectable but not trying too hard. Flash forward to your first team meeting: walking through the project code base. Amidst a plethora of abbreviations getting thrown around, the tech lead mentions “... and we use _sequel server_ for our DBMS”. Wait - that’s how SQL is pronounced? Now you’re panicking, remembering that not only did you call it “ess cue ell” in the interview but you don’t remember the difference between an inner join and outer join.
 
 Parsing the jargon used in the world of software development often feels like learning a whole new language (and this is on top of actually learning new programming languages). Here are some terms I wish I knew before starting my first internship:

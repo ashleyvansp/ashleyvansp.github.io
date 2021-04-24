@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Choosing the Best Front-end Framework</title>
-        <meta name="description" content="In computer science, a software framework is an abstraction in which software providing generic functionality can be selectively changed by additional user-w...">
-        <link rel="canonical" href="/choosing-the-best-front-end-framework">
+        <title>Git Hooks</title>
+        <meta name="description" content="• We all are interested in writing “good” code • This might include writing unit tests, including descriptive comments, and organizing code into logical sect...">
+        <link rel="canonical" href="/git-hooks">
 
     <!-- Site Favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/png" />
@@ -115,17 +115,17 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
         <header class="post-header">
             <div class="post-meta">
-                <time class="post-date" datetime="2019-01-05">
-                    January 5, 2019
+                <time class="post-date" datetime="2021-02-16">
+                    February 16, 2021
                 </time>
             </div><!-- .post-meta -->
-            <h1 class="post-title">Choosing the Best Front-end Framework</h1>
+            <h1 class="post-title">Git Hooks</h1>
             
             <p class="post-tags">
-                <a href="/tags/index.html#JavaScript"
-                    rel="tag">JavaScript</a>
-                <a href="/tags/index.html#Tips"
-                    rel="tag">Tips</a>
+                <a href="/tags/index.html#Git"
+                    rel="tag">Git</a>
+                <a href="/tags/index.html#How-To"
+                    rel="tag">How-To</a>
                 
             </p>
             
@@ -133,74 +133,84 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 
         
         <div class="post-thumbnail">
-            <img src="assets/images/posts/2019/desk.jpg" alt="Choosing the Best Front-end Framework">
+            <img src="assets/images/posts/2018/4.jpg" alt="Git Hooks">
         </div>
         
         <div class="post-content">
-            <p>In computer science, a <strong>software framework</strong> is an abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. A software framework provides a standard way to build and deploy applications.</p>
+            <p>•	We all are interested in writing “good” code
+•	This might include writing unit tests, including descriptive comments, and organizing code into logical sections to make it more readable
+•	In general we strive for a cohesive, robust codebase
+•	It turns out that a lot of these things can be automated by git hooks</p>
 
-<!--more-->
+<h3 id="what-are-hooks">What are hooks?</h3>
 
-<blockquote>
-  <p>“Walking on water and developing software from a specification are easy if both are frozen.” <cite>- Edward V Berard -</cite></p>
-</blockquote>
+<p>Hooks are… scripts that Git executes automatically when triggered by events such as a commit or a push. 
+•	The sample scripts provided by Git are bash shell scripts, but they can be written in any scripting language as long as it can be run as an executable</p>
 
-<p>A software framework is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions. Software frameworks may include support programs, compilers, code libraries, tool sets, and application programming interfaces (APIs) that bring together all the different components to enable development of a project or system. <a href="https://en.wikipedia.org/wiki/Software_framework">(Source)</a></p>
+<p>•	Hooks can be powerful tools with a wide range of functionality
+•	Can cover “grammar police” tasks such as following naming conventions and checking for trailing whitespace
+•	Critical tasks such as unreachable code and using uninitialized variables
+•	Run unit testing suites
+•	Sending an email notification if the repository is updated</p>
 
-<h2 id="react">React</h2>
+<p>•	Thinking about a continuous integration workflow, we see that different tasks for a hook make sense at different places
+•	For instance, if you want a hook that ensures that commit messages are capitalized, you would want it to execute immediately after the user enters the commit message
+•	Git has identified the 12 possible places in the workflow where a hook can execute, and these are specified by the name of the file in the hooks directory</p>
 
-<p>In computing, <a href="https://reactjs.org/">React</a> (sometimes styled React.js or ReactJS) is a JavaScript library for building user interfaces.</p>
+<p>•	Hooks are local to a Git repository, and they are not copied over to the new repository when you run git clone
+•	They also aren’t under version control
+•	So it can be challenging to keep them synchronized across team members
+•	However, there are ways to regulate this
+•	Hook scripts can be stored in the actual project directory and installed with either a symlink or a simple copy-paste
+•	Client-side hooks can best be used for two purposes
+o	Commit-related tasks such as code or commit message formatting
+o	Notification tasks such as emailing collaborators when changes are made
+•	But there’s also functionality with checking out or merging</p>
 
-<p>It is maintained by Facebook, Instagram and a community of individual developers and corporations.</p>
+<p>•	Since client-side hooks can be modified (or even removed) by the developer in their local repository, they can’t be used to enforce coding standards, only to facilitate good coding practices
+•	However, server-side hooks can be a safeguard against the rebellious developer by rejecting any commits that do not meet specified standards
+•	This is the primary purpose of server-side hooks, and they’re most useful on large projects
+•	Good for regulating who is allowed to push to the repo, the format of the commit message, or the changes contained in the commit</p>
 
-<p>React allows developers to create large web-applications that use data and can change over time without reloading the page. It aims primarily to provide speed, simplicity, and scalability. React processes only user interfaces in applications. This corresponds to View in the Model-View-Controller (MVC) pattern, and can be used in combination with other JavaScript libraries or frameworks in <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>, such as AngularJS.</p>
+<p>•	Here’s a very basic example
+•	I have a git repository for a hello world program
+•	Say that I want to change it to say good morning instead
+•	Then I have a simple pre-commit hook in that .git/hooks folder. Suppose your company suspects that the rival company is sneaking into your office in the night and forging bad commits on employees’ computers. To defend against this, the obvious thing to do is add a secret password before allowing commits.
+•	I chose to use my favourite scripting language and changed the shebang to reflect that I’d be using Python instead of Bash
+•	I’d like to take input from the developer, but hooks are typically noninteractive. So on line 6, I redirect standard input to the terminal.
+•	Then I ask for the secret password and exit with success or failure depending on whether the password is correct</p>
 
-<h2 id="vue">Vue</h2>
-
-<p><a href="https://vuejs.org/">Vue.js</a> <em>(commonly referred to as Vue; pronounced /vjuː/, like view)</em> is an open-source progressive JavaScript framework for building user interfaces. Integration into projects that use other JavaScript libraries is made easy with Vue because it is designed to be incrementally adoptable. Vue can also function as a web application framework capable of powering advanced single-page applications.</p>
-
-<h2 id="ember">Ember</h2>
-
-<p><a href="https://emberjs.com/">Ember.js</a> is an open-source JavaScript web framework, based on the Model–view–viewmodel (MVVM) pattern. It allows developers to create scalable single-page web applications by incorporating common idioms and best practices into the framework.</p>
-
-<p>Ember is used on many popular websites, including Discourse, Groupon, LinkedIn, Vine, Live Nation, Nordstrom, Twitch.tv and Chipotle. Although primarily considered a framework for the web, it is also possible to build desktop and mobile applications in Ember. The most notable example of an Ember desktop application is Apple Music, a feature of the iTunes desktop application.</p>
-
-<h2 id="angular">Angular</h2>
-
-<p>AngularJS <em>(commonly referred to as “Angular.js” or “AngularJS 1.X”)</em> is a JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications. The JavaScript components complement Apache Cordova, the framework used for developing cross-platform mobile apps. It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications. In 2014, the original AngularJS team began working on Angular (Application Platform).</p>
-
-<p>The AngularJS framework works by first reading the HTML page, which has additional custom tag attributes embedded into it. Angular interprets those attributes as directives to bind input or output parts of the page to a model that is represented by standard JavaScript variables. The values of those JavaScript variables can be manually set within the code, or retrieved from static or dynamic JSON resources.</p>
-
-<p>According to JavaScript analytics service Libscore, AngularJS is used on the websites of Wolfram Alpha, NBC, Walgreens, Intel, Sprint, ABC News, and about 12,000 other sites out of 1 million tested in October 2016. AngularJS is currently in the top 100 of the most starred projects on GitHub.</p>
-
-<p>AngularJS is the frontend part of the <strong>MEAN stack</strong>, consisting of MongoDB database, <a href="https://expressjs.com/">Express.js</a> web application server framework, Angular.js itself, and Node.js server runtime environment.</p>
 
         </div>
         <footer class="post-footer">
             <div class="post-share">
                 <span class="post-share-title">Share:</span>
                 <a target="_blank"
-                    href="https://twitter.com/share?text=Choosing+the+Best+Front-end+Framework&amp;url=https://ashvan.ca/choosing-the-best-front-end-framework">Twitter</a>
+                    href="https://twitter.com/share?text=Git+Hooks&amp;url=https://ashvan.ca/git-hooks">Twitter</a>
                 <a target="_blank"
-                    href="https://www.facebook.com/sharer/sharer.php?u=https://ashvan.ca/choosing-the-best-front-end-framework">Facebook</a>
+                    href="https://www.facebook.com/sharer/sharer.php?u=https://ashvan.ca/git-hooks">Facebook</a>
             </div><!-- .share-post -->
         </footer>
     </article>
     <section class="read-next inner">
         <h2 class="read-next-title">Read Next</h2>
         
-        
         <article class="post">
             <header class="post-header">
                 <div class="post-meta">
-                    <time class="published" datetime="January 28, 2021">January 28, 2021</time>
+                    <time class="published" datetime="February 2, 2021">February 2, 2021</time>
                 </div>
-                <h3 class="post-title"><a href="/inconvenient-truths">Inconvenient Truths</a></h3>
+                <h3 class="post-title"><a href="/wtf-is-mvvm">WTF is MVVM</a>
+                </h3>
                 <p class="post-tags">
                     
                     
                     
-                    <a href='/tag/startup/'>Startup</a>
+                    <a href='/tag/co-op/'>Co-op</a>
+                    
+                    
+                    
+                    <a href='/tag/internship/'>Internship</a>
                     
                     
                     
@@ -211,6 +221,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
                 </p>
             </header>
         </article>
+        
         
     </section><!-- .read-next -->
 
