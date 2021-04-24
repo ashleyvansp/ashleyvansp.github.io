@@ -25,7 +25,7 @@ title: Home
 <!-- Posts Index -->
 <div class="post-feed inner">
     {% if page.url == "/" %}
-    <div class="post-feed-title">Latest Articles</div>
+    <div class="post-feed-title">Latest Thoughts</div>
     {% endif %}
     <div class="post-feed inner-wide">
         {% for post in paginator.posts %}
@@ -33,11 +33,6 @@ title: Home
         {% endfor %}
     </div>
 </div>
-<!-- Pagination-->
-{% include pagination.html %}
-{% if site.mailchimp_url %}
-    {% include newsletter-box.html %}
-{% endif %}
 </main>
 
 

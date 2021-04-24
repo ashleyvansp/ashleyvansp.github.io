@@ -1,0 +1,43 @@
+I"<!--more-->
+<p>POV: It’s the first day of your internship at a tech company. You’re a little nervous, but you know how to reverse a linked list, so you figure you’ve got this. You don’t know exactly what a casual dress code allows, so you opt for something that your grandma would approve of for Sunday dinner; respectable but not trying too hard. Flash forward to your first team meeting: walking through the project code base. Amidst a plethora of abbreviations getting thrown around, the tech lead mentions “… and we use <em>sequel server</em> for our DBMS”. Wait - that’s how SQL is pronounced? Now you’re panicking, remembering that not only did you call it “ess cue ell” in the interview but you don’t remember the difference between an inner join and outer join.</p>
+
+<p>Parsing the jargon used in the world of software development often feels like learning a whole new language (and this is on top of actually learning new programming languages). Here are some terms I wish I knew before starting my first internship:</p>
+
+<h5 id="cli-command-line-interface">CLI (Command Line Interface)</h5>
+<p>A way to interact with a program using text-based commands (often done through Command Prompt/ Terminal/ your shell of choice). A CLI is a lightweight alternative to a GUI.</p>
+
+<h5 id="gui-graphical-user-interface">GUI (Graphical User Interface)</h5>
+<p>Often pronounced “gooey”. This is a way to interact with a program through clicking, scrolling, dragging, and dropping. A GUI is a prettier alternative to a CLI.</p>
+
+<h5 id="vcs-version-control-system">VCS (Version Control System)</h5>
+<p>This is a way for teams to keep track of changes to a codebase. If you’re not yet familiar, checkout <a href="https://git-scm.com">Git</a> (pun intended).</p>
+
+<h3 id="front-end">Front end</h3>
+<p>(A.K.A client side)
+The part of a website that users interact with. Front end code usually looks like HTML, CSS, and Javascript.</p>
+
+<h3 id="back-end">Back end</h3>
+<p>(A.K.A server side)</p>
+<ul>
+  <li>Stack</li>
+  <li>Framework</li>
+  <li>Architecture (see also: MVVM, MVC)</li>
+  <li>Front end</li>
+  <li>Backend</li>
+  <li>Wrapper</li>
+  <li>Server</li>
+  <li>Version control (VCS)</li>
+  <li>Local/ locally</li>
+  <li>Environment</li>
+  <li>PR</li>
+  <li>API</li>
+  <li>IDE</li>
+  <li>UX/UI</li>
+  <li>SSH</li>
+  <li>TDD</li>
+  <li>SaaS</li>
+</ul>
+
+<p>This just scratches the surface of the ever-expanding terminology used in the software world. The reality is, regardless of how prepared you try to be, the first day (and week and probably month) is going to be like drinking from a fire hose. Stay curious, enjoy the learning process, and ask for clarification. You might not know (yet!) the difference between MySQL and PostgreSQL but hey, at least now you know how to pronounce it.</p>
+
+:ET
