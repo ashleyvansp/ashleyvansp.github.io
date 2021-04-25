@@ -5,38 +5,31 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Apr 2021 11:09:42 -0600</pubDate>
-    <lastBuildDate>Sat, 24 Apr 2021 11:09:42 -0600</lastBuildDate>
+    <pubDate>Sat, 24 Apr 2021 18:07:01 -0600</pubDate>
+    <lastBuildDate>Sat, 24 Apr 2021 18:07:01 -0600</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Git Hooks</title>
-        <description>&lt;p&gt;•	We all are interested in writing “good” code
-•	This might include writing unit tests, including descriptive comments, and organizing code into logical sections to make it more readable
-•	In general we strive for a cohesive, robust codebase
-•	It turns out that a lot of these things can be automated by git hooks&lt;/p&gt;
+        <description>&lt;h3 id=&quot;what-are-hooks&quot;&gt;What are hooks?&lt;/h3&gt;
 
-&lt;h3 id=&quot;what-are-hooks&quot;&gt;What are hooks?&lt;/h3&gt;
+&lt;p&gt;Hooks are scripts that Git executes automatically when triggered by events such as a commit or a push. The sample scripts provided by Git are bash shell scripts, but they can be written in any scripting language as long as it can be run as an executable. Hooks can be powerful tools with a wide range of functionality, including but not limited to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Code formatting such as following naming conventions and checking for trailing whitespace&lt;/li&gt;
+  &lt;li&gt;Alerts for unreachable code or uninitialized variables&lt;/li&gt;
+  &lt;li&gt;Running unit testing suites&lt;/li&gt;
+  &lt;li&gt;Sending email notifications when the repository is updated&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Hooks are… scripts that Git executes automatically when triggered by events such as a commit or a push. 
-•	The sample scripts provided by Git are bash shell scripts, but they can be written in any scripting language as long as it can be run as an executable&lt;/p&gt;
-
-&lt;p&gt;•	Hooks can be powerful tools with a wide range of functionality
-•	Can cover “grammar police” tasks such as following naming conventions and checking for trailing whitespace
-•	Critical tasks such as unreachable code and using uninitialized variables
-•	Run unit testing suites
-•	Sending an email notification if the repository is updated&lt;/p&gt;
-
-&lt;p&gt;•	Thinking about a continuous integration workflow, we see that different tasks for a hook make sense at different places
+&lt;p&gt;### 
+Thinking about a continuous integration workflow, we see that different tasks for a hook make sense at different places
 •	For instance, if you want a hook that ensures that commit messages are capitalized, you would want it to execute immediately after the user enters the commit message
 •	Git has identified the 12 possible places in the workflow where a hook can execute, and these are specified by the name of the file in the hooks directory&lt;/p&gt;
 
-&lt;p&gt;•	Hooks are local to a Git repository, and they are not copied over to the new repository when you run git clone
-•	They also aren’t under version control
-•	So it can be challenging to keep them synchronized across team members
-•	However, there are ways to regulate this
-•	Hook scripts can be stored in the actual project directory and installed with either a symlink or a simple copy-paste
-•	Client-side hooks can best be used for two purposes
+&lt;h3 id=&quot;whats-the-catch&quot;&gt;What’s the &lt;em&gt;catch&lt;/em&gt;?&lt;/h3&gt;
+&lt;p&gt;The main caveat for team-based projects is that hooks are local to a Git repository and they are not copied over to the new repository when you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone&lt;/code&gt;. They also aren’t included under version control, so it can be challenging to keep them synchronized between team members. However, there are ways to regulate this: hook scripts can be stored in the actual project directory and installed with either a symlink or a simple copy-paste after the project is cloned.&lt;/p&gt;
+
+&lt;p&gt;•	Client-side hooks can best be used for two purposes
 o	Commit-related tasks such as code or commit message formatting
 o	Notification tasks such as emailing collaborators when changes are made
 •	But there’s also functionality with checking out or merging&lt;/p&gt;
@@ -46,13 +39,30 @@ o	Notification tasks such as emailing collaborators when changes are made
 •	This is the primary purpose of server-side hooks, and they’re most useful on large projects
 •	Good for regulating who is allowed to push to the repo, the format of the commit message, or the changes contained in the commit&lt;/p&gt;
 
-&lt;p&gt;•	Here’s a very basic example
-•	I have a git repository for a hello world program
-•	Say that I want to change it to say good morning instead
-•	Then I have a simple pre-commit hook in that .git/hooks folder. Suppose your company suspects that the rival company is sneaking into your office in the night and forging bad commits on employees’ computers. To defend against this, the obvious thing to do is add a secret password before allowing commits.
-•	I chose to use my favourite scripting language and changed the shebang to reflect that I’d be using Python instead of Bash
-•	I’d like to take input from the developer, but hooks are typically noninteractive. So on line 6, I redirect standard input to the terminal.
-•	Then I ask for the secret password and exit with success or failure depending on whether the password is correct&lt;/p&gt;
+&lt;h3 id=&quot;a-simple-example&quot;&gt;A simple example&lt;/h3&gt;
+&lt;p&gt;Suppose your company suspects that their rivals are sneaking into your office in the shadow of night and forging bad commits on employees’ computers. To defend against this, the obvious thing to do is add a secret password before allowing commits.&lt;br /&gt;
+For the acute learner, it may be important to note that while the rivals excel in espionage, they lack the technical expertise to understand how hooks work and hence we can add client-side hooks without worrying that they will be disabled.&lt;br /&gt;
+We add the following hook to the folder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git/hooks&lt;/code&gt; under the name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pre-commit&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-py&quot;&gt;#!/usr/local/bin/python3
+  
+import sys
+
+if __name__ == &apos;__main__&apos;:
+    sys.stdin = open(&quot;/dev/tty&quot;, &quot;r&quot;)
+    inp = input(&quot;What\&apos;s the secret password?\n&quot;)
+    if inp == &apos;CodingRox&apos;:
+        print(&apos;Password correct.&apos;)
+        exit(0)
+    else:
+        print(&apos;Password denied.&apos;)
+        exit(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then after making changes, we can see the effects of our security measures as follows:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/images/posts/2021/git_hooks.png#wide&quot; alt=&quot;Git commit&quot; /&gt;
+    
+        &lt;figcaption class=&quot;caption-text&quot;&gt;Performing a commit with a pre-commit hook.&lt;/figcaption&gt; 
+    
+&lt;/figure&gt;
 
 </description>
         <pubDate>Tue, 16 Feb 2021 00:00:00 -0700</pubDate>
