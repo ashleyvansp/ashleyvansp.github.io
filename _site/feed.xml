@@ -5,15 +5,15 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Apr 2021 18:07:01 -0600</pubDate>
-    <lastBuildDate>Sat, 24 Apr 2021 18:07:01 -0600</lastBuildDate>
+    <pubDate>Sat, 24 Apr 2021 20:33:56 -0600</pubDate>
+    <lastBuildDate>Sat, 24 Apr 2021 20:33:56 -0600</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Git Hooks</title>
         <description>&lt;h3 id=&quot;what-are-hooks&quot;&gt;What are hooks?&lt;/h3&gt;
 
-&lt;p&gt;Hooks are scripts that Git executes automatically when triggered by events such as a commit or a push. The sample scripts provided by Git are bash shell scripts, but they can be written in any scripting language as long as it can be run as an executable. Hooks can be powerful tools with a wide range of functionality, including but not limited to:&lt;/p&gt;
+&lt;p&gt;Hooks are scripts that Git executes automatically when triggered by events such as a commit or a push. The samples provided by Git are Bash shell scripts, but they can be written in any scripting language that can be run as an executable. Hooks can be powerful tools with a wide range of functionality, including but not limited to:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Code formatting such as following naming conventions and checking for trailing whitespace&lt;/li&gt;
   &lt;li&gt;Alerts for unreachable code or uninitialized variables&lt;/li&gt;
@@ -21,23 +21,15 @@
   &lt;li&gt;Sending email notifications when the repository is updated&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;### 
-Thinking about a continuous integration workflow, we see that different tasks for a hook make sense at different places
-•	For instance, if you want a hook that ensures that commit messages are capitalized, you would want it to execute immediately after the user enters the commit message
-•	Git has identified the 12 possible places in the workflow where a hook can execute, and these are specified by the name of the file in the hooks directory&lt;/p&gt;
+&lt;h3 id=&quot;how-are-they-activated&quot;&gt;How are they activated?&lt;/h3&gt;
+&lt;p&gt;Thinking about a continuous integration workflow, we see that different tasks for a hook make sense at different places. For instance, if you want a hook that ensures commit messages are capitalized, you would want it to execute immediately after the user enters the commit message. With this in mind, Git has identified the 12 possible places in the workflow where a hook can execute and these are specified by the name of the file in the hooks directory. Git also provides a sample script for each of the 12 hooks, and they are activated by removing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.sample&lt;/code&gt; from the name.&lt;/p&gt;
 
 &lt;h3 id=&quot;whats-the-catch&quot;&gt;What’s the &lt;em&gt;catch&lt;/em&gt;?&lt;/h3&gt;
-&lt;p&gt;The main caveat for team-based projects is that hooks are local to a Git repository and they are not copied over to the new repository when you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone&lt;/code&gt;. They also aren’t included under version control, so it can be challenging to keep them synchronized between team members. However, there are ways to regulate this: hook scripts can be stored in the actual project directory and installed with either a symlink or a simple copy-paste after the project is cloned.&lt;/p&gt;
+&lt;p&gt;The main caveat for team-based projects is that hooks are local to a Git repository and they are not copied over to the new repository after running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone&lt;/code&gt;. They also aren’t included under version control, so it can be challenging to keep them synchronized between team members. However, there are ways to regulate this: hook scripts can be stored in the project directory and installed with either a symlink or a simple copy-paste after the project is cloned.&lt;/p&gt;
 
-&lt;p&gt;•	Client-side hooks can best be used for two purposes
-o	Commit-related tasks such as code or commit message formatting
-o	Notification tasks such as emailing collaborators when changes are made
-•	But there’s also functionality with checking out or merging&lt;/p&gt;
-
-&lt;p&gt;•	Since client-side hooks can be modified (or even removed) by the developer in their local repository, they can’t be used to enforce coding standards, only to facilitate good coding practices
-•	However, server-side hooks can be a safeguard against the rebellious developer by rejecting any commits that do not meet specified standards
-•	This is the primary purpose of server-side hooks, and they’re most useful on large projects
-•	Good for regulating who is allowed to push to the repo, the format of the commit message, or the changes contained in the commit&lt;/p&gt;
+&lt;h3 id=&quot;client-side-vs-server-side&quot;&gt;Client-side vs. server-side&lt;/h3&gt;
+&lt;p&gt;Client-side hooks can best be used for commit-related tasks - such as formatting code or commit messages - and notification tasks such as emailing collaborators when changes are made. There’s also functionality with checking out or merging.&lt;br /&gt;
+Since client-side hooks can be modified (or even removed) by the developer in their local repository, they can’t be used to enforce coding standards, only to facilitate good coding practices. However, server-side hooks can be a safeguard against the rebellious developer by rejecting any commits that do not meet specified standards. This is the primary purpose of server-side hooks and they’re most useful on large projects to regulate who is allowed to push to the repo, the format of the commit message, or the changes contained in the commit.&lt;/p&gt;
 
 &lt;h3 id=&quot;a-simple-example&quot;&gt;A simple example&lt;/h3&gt;
 &lt;p&gt;Suppose your company suspects that their rivals are sneaking into your office in the shadow of night and forging bad commits on employees’ computers. To defend against this, the obvious thing to do is add a secret password before allowing commits.&lt;br /&gt;
@@ -58,7 +50,7 @@ if __name__ == &apos;__main__&apos;:
         exit(1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then after making changes, we can see the effects of our security measures as follows:&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img src=&quot;/assets/images/posts/2021/git_hooks.png#wide&quot; alt=&quot;Git commit&quot; /&gt;
+    &lt;img src=&quot;/assets/images/posts/2021/git_hooks.png&quot; alt=&quot;Git commit&quot; /&gt;
     
         &lt;figcaption class=&quot;caption-text&quot;&gt;Performing a commit with a pre-commit hook.&lt;/figcaption&gt; 
     
@@ -121,28 +113,6 @@ The part of an application that communicates between the database and the browse
         <category>Co-op</category>
         
         <category>Internship</category>
-        
-        <category>Tips</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Inconvenient Truths</title>
-        <description>&lt;p&gt;Coding is not hard. There. I said it.&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;p&gt;&lt;br /&gt;
-My sister started coding when she was 8 years old. Maybe she’s a prodigy, but more likely is the elephant in the room that we, as developers, love to ignore.&lt;/p&gt;
-
-&lt;p&gt;The abundance of resources freely and easily accessible is astounding. Regardless of how niche or convoluted the problem may be, there always seems to be a library, or StackOverflow answer to help. I mean, there are packages to find the circumference of the inner ear bone of salmon for goodness sake. So why do we encounter bugs that ? Why do the bulk of software development job descriptions contain a long list of programming languages&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 28 Jan 2021 00:00:00 -0700</pubDate>
-        <link>/inconvenient-truths</link>
-        <guid isPermaLink="true">/inconvenient-truths</guid>
-        
-        <category>Startup</category>
         
         <category>Tips</category>
         
