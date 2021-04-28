@@ -27,23 +27,6 @@ title: Curriculum Vitae
 <table>
 <thead>
     <tr>
-        <th>Deep Learning Specialization</th>
-        <th align="right">January 2021 - Present</th>
-    </tr>
-</thead>
-    <tbody>
-        <tr>
-            <td colspan="2">Coursera, online</td>
-        </tr>
-        <tr>
-            <td colspan="2">Five-course program covering neural networks and machine learning.</td>
-        </tr>
-    </tbody>
-</table>
-
-<table>
-<thead>
-    <tr>
         <th>Undergraduate Summer School</th>
         <th align="right">August 2020</th>
     </tr>
