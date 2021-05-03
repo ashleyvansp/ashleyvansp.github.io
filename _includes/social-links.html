@@ -1,4 +1,9 @@
 <p class="social-links">
+    {% if site.email %}
+    <a href="mailto:ashleyvansp@gmail.com" target="_blank">
+        {% include icons/envelope.html %}
+    </a>
+    {% endif %}
     {% if site.twitter %}
     <a href="https://twitter.com/{{ site.twitter }}" target="_blank">
         {% include icons/twitter.html %}
