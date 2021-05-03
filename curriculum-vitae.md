@@ -182,7 +182,7 @@ title: Curriculum Vitae
 
 ## Projects
 
-
+View the source code on [Github](https://github.com/ashleyvansp).
 <table>
 <thead>
     <tr>

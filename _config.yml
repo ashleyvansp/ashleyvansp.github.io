@@ -1,10 +1,5 @@
 # Site setings
 name: 'Ashley Van Spankeren'
-# description: 'Curious explorer
-# innate problem-solver'
-# meta_description: 'Innate Problem-solver'
-# logo: 'authorimage.jpg'
-# Author image is used in site sidebar and greetings in the home page hero text
 author:
   image: 'authorimage_back.jpg'
   greetings: "Curious explorer, innate problem solver."
@@ -15,8 +10,7 @@ production_url: https://ashvan.ca/
 
 # Contact form setings
 email: ashleyvansp@gmail.com
-contact_page_description: "Whether it's an inquiry, comment, or just wanting to grab a cup of coffee, I look forward to hearing from you."
-thankyou_page_description: "Thanks for reaching out! I'll get back to you soon."
+contact_page_description: Whether it's an inquiry, comment, or just wanting to grab a cup of coffee, I look forward to hearing from you via <a href="https://www.linkedin.com/in/ashleyvansp">LinkedIn</a> or <a href="mailto:ashleyvansp@gmail.com">email</a>.
 
 # Social links
 github: 'ashleyvansp'
