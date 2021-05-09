@@ -1,0 +1,46 @@
+I"�<h3 id="what-are-hooks">What are hooks?</h3>
+
+<p>Hooks are scripts that Git executes automatically when triggered by events such as a commit or a push. The samples provided by Git are Bash shell scripts, but they can be written in any scripting language that can be run as an executable. Hooks can be powerful tools with a wide range of functionality, including but not limited to:</p>
+<ul>
+  <li>Code formatting such as following naming conventions and checking for trailing whitespace</li>
+  <li>Alerts for unreachable code or uninitialized variables</li>
+  <li>Running unit testing suites</li>
+  <li>Sending email notifications when the repository is updated</li>
+</ul>
+
+<h3 id="how-are-they-activated">How are they activated?</h3>
+<p>Thinking about a continuous integration workflow, we see that different tasks for a hook make sense at different places. For instance, if you want a hook that ensures commit messages are capitalized, you would want it to execute immediately after the user enters the commit message. With this in mind, Git has identified the 12 possible places in the workflow where a hook can execute and these are specified by the name of the file in the hooks directory. Git also provides a sample script for each of the 12 hooks, and they are activated by removing <code class="language-plaintext highlighter-rouge">.sample</code> from the name.</p>
+
+<h3 id="whats-the-catch">What’s the <em>catch</em>?</h3>
+<p>The main caveat for team-based projects is that hooks are local to a Git repository and they are not copied over to the new repository after running <code class="language-plaintext highlighter-rouge">git clone</code>. They also aren’t included under version control, so it can be challenging to keep them synchronized between team members. However, there are ways to regulate this: hook scripts can be stored in the project directory and installed with either a symlink or a simple copy-paste after the project is cloned.</p>
+
+<h3 id="client-side-vs-server-side">Client-side vs. server-side</h3>
+<p>Client-side hooks can best be used for commit-related tasks - such as formatting code or commit messages - and notification tasks such as emailing collaborators when changes are made. There’s also functionality with checking out or merging.<br />
+Since client-side hooks can be modified (or even removed) by the developer in their local repository, they can’t be used to enforce coding standards, only to facilitate good coding practices. However, server-side hooks can be a safeguard against the rebellious developer by rejecting any commits that do not meet specified standards. This is the primary purpose of server-side hooks and they’re most useful on large projects to regulate who is allowed to push to the repo, the format of the commit message, or the changes contained in the commit.</p>
+
+<h3 id="a-simple-example">A simple example</h3>
+<p>Suppose your company suspects that their rivals are sneaking into your office in the shadow of night and forging bad commits on employees’ computers. To defend against this, the obvious thing to do is add a secret password before allowing commits.<br />
+For the acute learner, it may be important to note that while the rivals excel in espionage, they lack the technical expertise to understand how hooks work and hence we can add client-side hooks without worrying that they will be disabled.<br />
+We add the following hook to the folder <code class="language-plaintext highlighter-rouge">.git/hooks</code> under the name <code class="language-plaintext highlighter-rouge">pre-commit</code>:</p>
+<pre><code class="language-py">#!/usr/local/bin/python3
+  
+import sys
+
+if __name__ == '__main__':
+    sys.stdin = open("/dev/tty", "r")
+    inp = input("What\'s the secret password?\n")
+    if inp == 'CodingRox':
+        print('Password correct.')
+        exit(0)
+    else:
+        print('Password denied.')
+        exit(1)</code></pre>
+<p>Then after making changes, we can see the effects of our security measures as follows:</p>
+<figure>
+    <img src="/assets/images/posts/2021/git_hooks.png" alt="Git commit" />
+    
+        <figcaption class="caption-text">Performing a commit with a pre-commit hook.</figcaption> 
+    
+</figure>
+
+:ET

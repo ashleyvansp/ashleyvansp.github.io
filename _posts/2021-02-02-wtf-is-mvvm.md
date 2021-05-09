@@ -22,11 +22,11 @@ Often pronounced "gooey". This is a way to interact with a program through click
 This is a way for teams to keep track of changes to a codebase. If you're not yet familiar, checkout [Git](https://git-scm.com) (pun intended).
 
 #### Front end
-(AKA client side)\
+(AKA client side)  
 The part of an application that users interact with. Front end code usually looks like HTML, CSS, and Javascript.
 
 #### Back end
-(AKA server side)\
+(AKA server side)  
 The part of an application that communicates between the database and the browser. Also the part that users don't see. Back end code may include Java, Python, or C#.
 
 #### Architecture
