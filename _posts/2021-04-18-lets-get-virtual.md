@@ -25,8 +25,9 @@ As an example, here's a guide to setting up a virtual machine with Ubuntu 18.04 
 10. In the install wizard, choose Install Ubuntu, select your desired keyboard layout, then select Normal installation.
 11. Then it'll ask about the installation type. Select Erase disk and install Ubuntu. Spooky! But that's the beauty of virtualization; your home environment is completely protected.
  ![](/assets/images/posts/2021/lets-get-virtual/installation-type.png)
-12. Press continue for the rest of the options. Enter a username and password when prompted, then restart the virtual machine. 
+12. Press continue for the rest of the options. Enter a username and password when prompted, then restart the virtual machine.   
 
+\
 You now have a fully functional Ubuntu environment! Options such as RAM, storage size, and display ratio can be tweaked and configured to suit your needs (within the constraints of your hard drive).
 
 ## SSH
