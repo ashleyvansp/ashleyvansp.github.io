@@ -1,10 +1,4 @@
----
-layout: page
-title: Curriculum Vitae
----
-
-## Education
-
+I"~.<h2 id="education">Education</h2>
 
 <table>
 <thead>
@@ -16,9 +10,9 @@ title: Curriculum Vitae
     <tbody>
         <tr>
             <td colspan="2">University of Victoria, Victoria, BC
-            <br>
+            <br />
             Combined Major in Mathematics and Computer Science
-            <br>
+            <br />
             GPA: 8.73 / 9.00</td>
         </tr>
     </tbody>
@@ -41,8 +35,7 @@ title: Curriculum Vitae
     </tbody>
 </table>
 
-## Technical Skills
-
+<h2 id="technical-skills">Technical Skills</h2>
 
 <table>
 <thead>
@@ -100,8 +93,7 @@ title: Curriculum Vitae
     </tbody>
 </table>
 
-## Professional Experience
-
+<h2 id="professional-experience">Professional Experience</h2>
 
 <table>
 <thead>
@@ -113,7 +105,7 @@ title: Curriculum Vitae
     <tbody>
         <tr>
             <td colspan="2">BC Cancer Agency, Vancouver, BC
-            <br>
+            <br />
             Ovarian Cancer Research Program (OVCARE)
             </td>
         </tr>
@@ -180,9 +172,9 @@ title: Curriculum Vitae
     </tbody>
 </table>
 
-## Projects
+<h2 id="projects">Projects</h2>
 
-View the source code on [Github](https://github.com/ashleyvansp).
+<p>View the source code on <a href="https://github.com/ashleyvansp">Github</a>.</p>
 <table>
 <thead>
     <tr>
@@ -192,10 +184,10 @@ View the source code on [Github](https://github.com/ashleyvansp).
 </thead>
     <tbody>
         <tr>
-            <td colspan="2">Python</td>
+            <td colspan="2">Python, R</td>
         </tr>
         <tr>
-            <td colspan="2">Fine-tuned U-Net model trained to identify different minerals in salmon otolith microscope images. Created for the Juanes Lab at the University of Victoria.</td>
+            <td colspan="2">Determines the ratio of vaterite to aragonite in salmon otolith microscope images and generates a report detailing the dimensions, area, and perimeter of the structure. Created for the Juanes Lab at the University of Victoria.</td>
         </tr>
     </tbody>
 </table>
@@ -268,9 +260,7 @@ View the source code on [Github](https://github.com/ashleyvansp).
     </tbody>
 </table>
 
-
-## Volunteer Experience
-
+<h2 id="volunteer-experience">Volunteer Experience</h2>
 
 <table>
 <thead>
@@ -340,8 +330,7 @@ View the source code on [Github](https://github.com/ashleyvansp).
     </tbody>
 </table>
 
-## Awards
-
+<h2 id="awards">Awards</h2>
 
 <table>
 <thead>
@@ -380,7 +369,7 @@ View the source code on [Github](https://github.com/ashleyvansp).
 <table>
 <thead>
     <tr>
-        <th>Angus & Annie MacKay Scholarship</th>
+        <th>Angus &amp; Annie MacKay Scholarship</th>
         <th align="right">2017, 2019</th>
     </tr>
 </thead>
@@ -411,3 +400,4 @@ View the source code on [Github](https://github.com/ashleyvansp).
     </tbody>
 </table>
 
+:ET
