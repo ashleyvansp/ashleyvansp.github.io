@@ -65,4 +65,4 @@ Setting it up is quick and simple for any environment to which you have SSH acce
 7. Enter your password when prompted, then you have access to create and modify files as desired.
 
 ## ---
-The capabilities of these three tools truly enrich the experience of virtualization and remote development. Not only do they give developers the freedom to test new versions with the safety net of isolation, they facilitate cohesion and consistency in team-based development, allowing all contributors to work on the same environment.
+The capabilities of these three tools truly enrich the experience of virtualization and remote development. Not only do they give developers the freedom to test new versions with the safety net of isolation, they facilitate cohesion and consistency in team-based development, allowing all contributors to work in the same environment. By decoupling the technology from the available infrastructure, virtualization opens the door for improved efficiency, increased flexibility, and bolder innovation. And *that* seems like something worth dancing about.

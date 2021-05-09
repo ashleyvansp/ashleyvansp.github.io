@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 May 2021 13:04:37 -0600</pubDate>
-    <lastBuildDate>Sun, 09 May 2021 13:04:37 -0600</lastBuildDate>
+    <pubDate>Sun, 09 May 2021 13:23:31 -0600</pubDate>
+    <lastBuildDate>Sun, 09 May 2021 13:23:31 -0600</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -73,7 +73,7 @@ Setting it up is quick and simple for any environment to which you have SSH acce
 &lt;/ol&gt;
 
 &lt;h2&gt;—&lt;/h2&gt;
-&lt;p&gt;The capabilities of these three tools truly enrich the experience of virtualization and remote development. Not only do they give developers the freedom to test new versions with the safety net of isolation, they facilitate cohesion and consistency in team-based development, allowing all contributors to work on the same environment.&lt;/p&gt;
+&lt;p&gt;The capabilities of these three tools truly enrich the experience of virtualization and remote development. Not only do they give developers the freedom to test new versions with the safety net of isolation, they facilitate cohesion and consistency in team-based development, allowing all contributors to work in the same environment. By decoupling the technology from the available infrastructure, virtualization opens the door for improved efficiency, increased flexibility, and bolder innovation. And &lt;em&gt;that&lt;/em&gt; seems like something worth dancing about.&lt;/p&gt;
 </description>
         <pubDate>Sun, 18 Apr 2021 00:00:00 -0600</pubDate>
         <link>/lets-get-virtual</link>
